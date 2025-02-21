@@ -11,7 +11,8 @@
     "ghcr.io/devcontainers-extra/features/maven-sdkman:2": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
-    }
+    },
+    "ghcr.io/kreemer/features/chrometesting:1": {}
   },
   "customizations": {
     "vscode": {
