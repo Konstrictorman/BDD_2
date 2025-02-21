@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.475 s <<< FAILURE! -- in runners.TestRunner
+Google Search.Search for a term -- Time elapsed: 0.123 s <<< ERROR!
+java.lang.IllegalStateException: The driver executable must exist: /workspaces/bdd-selenium-lab/path/to/chromedriver
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:315)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:144)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:139)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:434)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:46)
+	at steps.SearchSteps.setUp(SearchSteps.java:19)
+
+Google Search.Search for a term -- Time elapsed: 0.124 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at steps.SearchSteps.tearDown(SearchSteps.java:41)
+
