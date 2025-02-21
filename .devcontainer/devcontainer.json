@@ -1,8 +1,6 @@
 {
   "name": "BDD Lab with Selenium and Java",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/java:17",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
