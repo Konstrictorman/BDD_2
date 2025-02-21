@@ -15,7 +15,7 @@ public class SearchSteps {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver");
         driver = new ChromeDriver();
     }
 
