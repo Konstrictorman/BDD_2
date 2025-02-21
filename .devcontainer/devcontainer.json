@@ -1,13 +1,17 @@
 {
   "name": "Ubuntu Codespace",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/java:17/base:ubuntu",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    }
   },
   "extensions": [
     "vscjava.vscode-java-pack"
   ],
-  "postCreateCommand": "sudo apt update && sudo apt install -y default-jdk",
-  "remoteUser": "vscode",
-  "features": {}
+  "postCreateCommand": "sudo apt update && sudo apt install -y",
+  "remoteUser": "vscode"
 }
