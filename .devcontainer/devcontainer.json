@@ -1,6 +1,6 @@
 {
   "name": "Ubuntu Codespace",
-  "image": "mcr.microsoft.com/devcontainers/java:17/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
