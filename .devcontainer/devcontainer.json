@@ -31,6 +31,6 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "sudo apt update && sudo apt install -y",
+  "postCreateCommand": "sudo apt update",
   "remoteUser": "vscode"
 }
