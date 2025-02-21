@@ -1,5 +1,5 @@
 {
-  "name": "Ubuntu Codespace",
+  "name": "BDD Lab with Selenium and Java",
   "image": "mcr.microsoft.com/devcontainers/java:17",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
@@ -7,11 +7,30 @@
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "17"
+    },
+    "ghcr.io/devcontainers/features/maven:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
     }
   },
-  "extensions": [
-    "vscjava.vscode-java-pack"
-  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "dbaeumer.vscode-eslint",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Application",
+      "onAutoForward": "notify"
+    }
+  },
   "postCreateCommand": "sudo apt update && sudo apt install -y",
   "remoteUser": "vscode"
 }
