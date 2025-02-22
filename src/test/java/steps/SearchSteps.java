@@ -21,10 +21,15 @@ public class SearchSteps {
         try {
             System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
             // Path tempDir = Files.createTempDirectory("chrome-user-data");
-            // ChromeOptions options = new ChromeOptions();
+            ChromeOptions options = new ChromeOptions();
             // options.addArguments("--user-data-dir=" + tempDir.toString());
             // System.out.println("Temporary directory created at: " + tempDir.toString());
-            driver = new ChromeDriver();
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--remote-allow-origins=*");
+            driver = new ChromeDriver(options);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to initialize ChromeDriver", e);
