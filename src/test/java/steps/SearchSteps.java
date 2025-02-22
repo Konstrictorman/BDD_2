@@ -9,14 +9,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class SearchSteps {
     private WebDriver driver;
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver");
-        driver = new ChromeDriver();
+        try {
+            System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+            // Path tempDir = Files.createTempDirectory("chrome-user-data");
+            // ChromeOptions options = new ChromeOptions();
+            // options.addArguments("--user-data-dir=" + tempDir.toString());
+            // System.out.println("Temporary directory created at: " + tempDir.toString());
+            driver = new ChromeDriver();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to initialize ChromeDriver", e);
+        }
     }
 
     @Given("I am on the Google search page")
