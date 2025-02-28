@@ -1,3 +1,5 @@
 /workspaces/bdd-selenium-lab/src/test/java/com/example/AppTest.java
+/workspaces/bdd-selenium-lab/src/test/java/pages/LoginPage.java
 /workspaces/bdd-selenium-lab/src/test/java/runners/TestRunner.java
+/workspaces/bdd-selenium-lab/src/test/java/steps/LoginSteps.java
 /workspaces/bdd-selenium-lab/src/test/java/steps/SearchSteps.java

@@ -1,3 +1,5 @@
-com/example/AppTest.class
+steps/LoginSteps.class
 runners/TestRunner.class
 steps/SearchSteps.class
+com/example/AppTest.class
+pages/LoginPage.class

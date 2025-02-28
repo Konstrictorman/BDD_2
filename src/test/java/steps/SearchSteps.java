@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.TimeUnit;
 
 public class SearchSteps {
     private WebDriver driver;
@@ -20,16 +21,14 @@ public class SearchSteps {
     public void setUp() {
         try {
             System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-            // Path tempDir = Files.createTempDirectory("chrome-user-data");
             ChromeOptions options = new ChromeOptions();
-            // options.addArguments("--user-data-dir=" + tempDir.toString());
-            // System.out.println("Temporary directory created at: " + tempDir.toString());
             options.addArguments("--headless");
             options.addArguments("--disable-gpu");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver(options);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to initialize ChromeDriver", e);
