@@ -8,7 +8,7 @@ Feature: Login functionality on The Internet
     When the user enters username "<username>" and password "<password>"
     And the user clicks the login button
     Then the user should be redirected to the secure area
-    And a success message should be displayed
+    And a success "You logged into a secure area!" should be displayed
 
     Examples:
       | username  | password               |
