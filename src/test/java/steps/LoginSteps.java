@@ -45,9 +45,9 @@ public class LoginSteps {
         assertTrue(driver.getCurrentUrl().contains("/secure"));
     }
 
-    @Then("a success message should be displayed")
-    public void a_success_message_should_be_displayed() {
-        assertTrue(driver.getPageSource().contains("You logged into a secure area!"));
+    @Then("a success {string} should be displayed")
+    public void a_success_message_should_be_displayed(String message) {
+        assertTrue(driver.getPageSource().contains(message));
         driver.quit();
     }
 }
