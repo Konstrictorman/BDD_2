@@ -1,5 +1,7 @@
 steps/LoginSteps.class
+com/example/AppTest.class
 runners/TestRunner.class
 steps/SearchSteps.class
-com/example/AppTest.class
+pages/CheckBoxPage.class
 pages/LoginPage.class
+steps/CheckboxesStepDefinitions.class
