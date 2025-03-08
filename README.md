@@ -17,6 +17,7 @@ This project is a **Behavior-Driven Development (BDD)** test automation framewor
 
 ## Project Structure
 
+```
 BDD_2/ 
 │── src/  
 │ ├── java/  
@@ -49,6 +50,7 @@ BDD_2/
 │ │ │ │ ├── SearchSteps.java 
 │── pom.xml # Maven configuration file 
 │── target/ # Location of reports and compiled classes
+```
 
 ## How to run the tests
 
