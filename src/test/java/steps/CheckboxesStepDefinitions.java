@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import java.util.concurrent.TimeUnit;
 
 public class CheckboxesStepDefinitions {
     WebDriver driver;
@@ -25,8 +26,7 @@ public class CheckboxesStepDefinitions {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        
-        //driver.get("https://the-internet.herokuapp.com/checkboxes");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);        
         checkBoxPage = new CheckBoxPage(driver);
         checkBoxPage.openCheckBoxPage();
     }
